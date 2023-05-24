@@ -526,8 +526,10 @@ extern pgoff_t hugetlb_basepage_index(struct page *page);
  */
 static inline pgoff_t page_to_pgoff(struct page *page)
 {
+#if 0
 	if (unlikely(PageHuge(page)))
 		return hugetlb_basepage_index(page);
+#endif
 	return page_to_index(page);
 }
 
