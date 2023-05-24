@@ -115,8 +115,6 @@ extern void __compiletime_error("bad bitfield mask")
 __bad_mask(void);
 static __always_inline u64 field_multiplier(u64 field)
 {
-	if ((field | (field - 1)) & ((field | (field - 1)) + 1))
-		__bad_mask();
 	return field & -field;
 }
 static __always_inline u64 field_mask(u64 field)
