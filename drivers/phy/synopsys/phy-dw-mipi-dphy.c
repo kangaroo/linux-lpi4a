@@ -708,6 +708,7 @@ static int dw_dphy_remove(struct platform_device *pdev)
 
 static const struct of_device_id dw_dphy_of_match[] = {
 	{ .compatible = "thead,light-mipi-dphy", .data = NULL, },
+	{}
 };
 MODULE_DEVICE_TABLE(of, dw_dphy_of_match);
 
