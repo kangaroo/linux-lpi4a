@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: GPL-2.0
 obj-$(CONFIG_VIRTIO) += virtio.o virtio_ring.o
 obj-$(CONFIG_VIRTIO_MMIO) += virtio_mmio.o
-obj-$(CONFIG_VIRTIO_KHV_MMIO) += virtio_khv_mmio.o mmio_khv.o
+obj-$(CONFIG_VIRTIO_KHV_MMIO) += virtio_khv_mmio_all.o
+virtio_khv_mmio_all-objs += virtio_khv_mmio.o mmio_khv.o
 obj-$(CONFIG_VIRTIO_PCI) += virtio_pci.o
 obj-$(CONFIG_VIRTIO_LIGHT) += virtio_light.o
 virtio_pci-y := virtio_pci_modern.o virtio_pci_common.o
